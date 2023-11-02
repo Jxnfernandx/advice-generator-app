@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+*,
+*::before,
+*::after {
+    
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    /* Primary colors */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+img,
+svg {
+    object-fit: contain;
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#advice-container {
+    background-color: var(--dark-grayish-blue);
+    height: 20em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: 1em;
+    padding: 2em;
+    position: relative;
+}
+
+.title-capital {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: .8em;
+}
+
+p {
+    color: var(--light-cyan);
+    font-size: 28px;
+}
+
+.svg-circle {
+    height: 3em;
+    width: 3em;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:-1em;
+}
+
+.svg-circle:hover {
+    box-shadow: 0px 0px 5px #5fad86, 0px 0px 25px #03e9f4, 0px 0px 50px #1ec7ab, 0px 0px 100px #16a144;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+@media only screen and (max-width: 600px) {
+
+    
+    #advice-container {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-capital {
+        font-size: 1em;
+    }
+    
+    p {
+        font-size: 1.8em;
+    }
+
+    .svg-circle {
+        height: 4em;
+        width: 4em;
+
+    }
+}
